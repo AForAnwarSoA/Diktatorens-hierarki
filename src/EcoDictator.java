@@ -34,11 +34,14 @@ public class EcoDictator extends Leader implements PowerActions {
     public void holdParade() {
         System.out.println("EcoDictator " + getName() + " is holding a parade made entirely of bicycles and compost trucks.");
     }
-
-
     public void plantTrees(int amount) {
+        if (amount <= 0) {
+            throw new IllegalArgumentException("Antal træer skal være større end 0: " + amount);
+        }
         treesPlanted += amount;
         System.out.println("EcoDictator " + getName() + " forces the citizens to plant " + amount + " trees!");
     }
+
+
 }
 

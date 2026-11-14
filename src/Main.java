@@ -4,9 +4,13 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         List<Leader> leaders = new ArrayList<>();
-        leaders.add(new MilitaryDictator("General Zod", "Krypton", 15, "General"));
-        leaders.add(new PoliticalDictator("Chancellor Palpatine", "Galactic Empire", 20, "Sith Party"));
-        leaders.add(new EcoDictator("Supreme Leader Greta Greenleaf", "Republic of Evergreenia", 8, "Recycle or perish!"));
+        try {
+            leaders.add(new MilitaryDictator("General Zod", "Krypton", 14, "General"));
+            leaders.add(new PoliticalDictator("Chancellor Palpatine", "Galactic Empire", 20, "Sith Party"));
+            leaders.add(new EcoDictator("Supreme Leader Greta Greenleaf", "Republic of Evergreenia", 8, "Recycle or perish!"));
+        } catch (IllegalArgumentException e) {
+            System.out.println("Kunne ikke oprette diktator: " + e.getMessage());
+        }
 
         for (Leader leader : leaders) {
             leader.printDetails();
@@ -24,11 +28,7 @@ public class Main {
                 eco.plantTrees(1000);
                 eco.printDetails();
             }
-            try {
-                leaders.add(new MilitaryDictator("General Zod", "Krypton", -7, "General"));
-            } catch (IllegalArgumentException e) {
-                System.out.println("Kunne ikke oprette diktator: " + e.getMessage());
-            }
+
             System.out.println();
         }
     }
