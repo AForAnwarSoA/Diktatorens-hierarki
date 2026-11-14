@@ -1,5 +1,5 @@
 public class PoliticalDictator extends Leader implements PowerActions {
-    private String partyName;
+    private final String partyName;
 
     public PoliticalDictator(String name, String country, int yearsInPower, String partyName) {
         super(name, country, yearsInPower);

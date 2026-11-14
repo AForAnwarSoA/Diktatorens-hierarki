@@ -1,5 +1,5 @@
 public class MilitaryDictator extends Leader implements PowerActions {
-    private String militaryRank;
+    private final String militaryRank;
 
     public MilitaryDictator(String name, String country, int yearsInPower, String militaryRank) {
         super(name, country, yearsInPower);

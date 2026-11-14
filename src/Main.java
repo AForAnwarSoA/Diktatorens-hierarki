@@ -12,16 +12,15 @@ public class Main {
             leader.printDetails();
             leader.giveSpeech();
 
-            if (leader instanceof PowerActions) {
-                PowerActions actions = (PowerActions) leader;
+
+            if (leader instanceof PowerActions actions) {
                 actions.implementPolicy();
                 actions.repressOpposition();
                 actions.holdParade();
             }
 
 
-            if (leader instanceof EcoDictator) {
-                EcoDictator eco = (EcoDictator) leader;
+            if (leader instanceof EcoDictator eco) {
                 eco.plantTrees(1000);
                 eco.printDetails();
             }

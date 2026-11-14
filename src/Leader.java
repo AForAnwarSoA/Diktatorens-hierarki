@@ -1,7 +1,7 @@
 public abstract class Leader {
-    private String name;
-    private String country;
-    private int yearsInPower;
+    private final String name;
+    private final String country;
+    private final int yearsInPower;
 
     public Leader(String name, String country, int yearsInPower) {
         this.name = name;
