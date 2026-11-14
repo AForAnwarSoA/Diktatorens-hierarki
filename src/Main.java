@@ -24,7 +24,11 @@ public class Main {
                 eco.plantTrees(1000);
                 eco.printDetails();
             }
-
+            try {
+                leaders.add(new MilitaryDictator("General Zod", "Krypton", -7, "General"));
+            } catch (IllegalArgumentException e) {
+                System.out.println("Kunne ikke oprette diktator: " + e.getMessage());
+            }
             System.out.println();
         }
     }
